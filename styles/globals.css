@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Futura";
+    src: url("/fonts/Futura Book font.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Futura Bold";
+    src: url("/fonts/Futura Bold.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth !important;
+    font-family: "Futura", sans-serif;
+}
+*::selection {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.bold {
+    font-family: "Futura Bold", sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.mini-title {
+    @apply uppercase 2xl:text-sm text-[13px] tracking-wider;
+}
+.shadow-box {
+    box-shadow: 0 0 20px rgb(202, 199, 199);
+}
+
+.aboutSlides {
+    position: relative;
+    width: 500px !important;
+    height: 420px !important;
+}
+.swiper-pagination-bullet {
+    @apply !w-6 !rounded-md !h-[5px] bg-slate-600;
+}
+.swiper-pagination-bullet-active {
+    @apply !bg-black;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    @apply !text-black;
+}
+
+.gradientBgColor {
+    background-color: transparent;
+    background-image: linear-gradient(90deg, #5758df 0%, #f77991 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.thin-underline {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: black;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 2%;
+}
+
+.shadow-box {
+    box-shadow: 0 0 20px rgb(202, 199, 199);
+}
+
+.fluid-container {
+    @apply max-w-6xl mx-auto;
+}
+.horizontal-section-padding {
+    @apply lg:px-10 px-8;
+}
+
+.section-padding {
+    @apply 2xl:py-32 py-20;
+}
+.section-margin {
+    @apply 2xl:my-32 !my-20;
+}
+.section-margin-t {
+    @apply 2xl:mt-32 mt-20;
+}
+.section-margin-b {
+    @apply 2xl:mb-32 mb-20;
+}
+.section-margin-t-md {
+    @apply mt-16;
+}
+.slider-container {
+    @apply duration-300 cursor-grab;
+}
+.slider-container div {
+    @apply min-w-[50%];
+}
+.slider-container-active {
+    @apply scale-105 cursor-grabbing;
+}
+
+.cursoul-item {
+    @apply w-full lg:min-w-[45%] min-w-[95%] lg:max-w-[45%] max-w-[95%]  mr-[5%] h-full grid grid-cols-2 duration-300;
+}
+
+.mobile-navigation-bar {
+    width: 30px;
+    height: 3px;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.smooth-scroll-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    max-width: 100vw;
+    max-height: 100vh;
+}
